@@ -1,0 +1,87 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+}
+
+[data-acessivel="true"] {
+  --bg-color: #F5F5F5; /* Preto suave */
+  --text-color:  #2E2E2E; /* Cinza claro */
+  
+  
+ 
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  overflow-x: hidden; /* Evita rolagem lateral */
+}
+
+a{
+  color:#007BFF
+}
+
+/* ESTILO DO BOTAO DE ACESSIBILIDADE*/
+
+button#acessibilidadeToggle {
+  padding: 10px 15px;
+  margin: 20px 0;
+  background-color:  #D55E00 ; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#acessibilidadeToggle:hover {
+  background-color: #009E73;
+}
+
+
+
+/* Ajuste para o mapa Google */
+.mapaGoogle {
+  max-width: 100%; /* Limita o tamanho ao contêiner */
+  height: auto; /* Ajusta a altura proporcionalmente */
+  display: block; /* Garante que o mapa não cause vazamento */
+  margin: 0 auto; /* Centraliza o mapa */
+}
+
+/* RESPONSIVIDADE COM CELULARES */
+@media (max-width: 450px) {
+  body {
+    font-size: 19px;
+  }
+
+  
+
+  .mapaGoogle {
+    width: 200%; /* Ajusta o mapa para caber na tela */
+    height: 300; /* Define uma altura fixa */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ 
+
+  .mapaGoogle {
+    width: 100%; /* Ajusta o mapa para caber na tela */
+    height: 380px; /* Define uma altura fixa */
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    font-size: 16px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+ 
+}
