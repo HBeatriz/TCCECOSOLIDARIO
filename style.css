@@ -4,7 +4,7 @@ body.pagina1 {
   font-size: larger;
 }
 
-body.pagina1 h3 {
+body.pagina1 h3{
   font-family: 'Moon Dance', cursive;
   font-size: x-large;
 }
@@ -13,13 +13,95 @@ body.pagina1 .caixa-reciclagem {
   background-color: #62d2a2;
   border-radius: 20px;
   padding: 20px;
-  margin: 20px auto; /* centraliza horizontalmente e mantém margem vertical */
-  width: calc(100% - 40px); /* ajusta largura para compensar padding e margem */
-  max-width: 1200px; /* opcional, para limitar largura máxima */
+  margin: 90px auto 20px auto; /* aumenta a distância do topo (barra de botões) */
+  width: calc(100% - 40px);
+  max-width: 1200px;
   color: #000;
   box-sizing: border-box;
   font-family: 'Livvic', sans-serif;
+  border: 1px solid #1fab89;
+  position: relative; /* garante que elementos absolutos dentro fiquem relativos a este container */
 }
+/* Logo animado - aparece suavemente ao abrir a página */
+.logo-container {
+  text-align: center;
+  margin: 70px auto 30px auto; /* aumentei o top para baixar o logo */
+  position: relative;
+}
+
+.eco {
+  font-family: 'Livvic', sans-serif;
+  font-size: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  animation: ecoAppear 2s ease forwards;
+}
+
+.icon-reciclagem {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.solidario {
+  font-family: 'Moon Dance', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  margin: -30px 0 0 0;  /* ajusta a distância, negativo aproxima */
+  color: #000000;
+  text-transform: uppercase;
+  animation: solidarioAppear 2s ease forwards;
+}
+
+/* Animação suave */
+@keyframes ecoAppear {
+  from { opacity: 0; transform: translateY(-30px) scale(0.8); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes solidarioAppear {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Borrão de tinta de fundo */
+.borrão-fundo {
+  position: absolute;
+  top: 60%;                /* aumentei de 50% para 60% para baixar */
+  left: 50%;
+  width: 600px;
+  height: auto;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0.5;
+  z-index: -2;            
+  animation: borrãoAppear 2.5s ease forwards;
+}
+
+/* Animação do borrão surgindo */
+@keyframes borrãoAppear {
+  from { opacity: 0.3; transform: translate(-50%, -50%) scale(0.7); }
+  to { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
+}
+
+.residuos-container {
+  display: flex;
+  flex-wrap: wrap; /* para que fique responsivo em telas pequenas */
+  gap: 20px;       /* espaço entre os textos */
+  justify-content: center; /* centraliza horizontalmente */
+  margin: 20px 0;
+}
+
+.residuo {
+  flex: 1 1 400px; /* cresce, encolhe, largura mínima de 400px */
+  border-radius: 5px #62d2a2;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
 
 
 body.pagina1 .linha {
@@ -288,15 +370,17 @@ body.pagina1 .mapaGoogle iframe {
 
 
 
+/* ---------------- PÁGINA 2 ---------------- */
 /* --CSS DOAÇÃO-- */
 
 body.pagina2 {
-  background-color: #bcf8f3;
+  background-color: #d2daff;
   font-family: 'Livvic', sans-serif;
   font-size: larger;
 }
 
-body.pagina2 h3 {
+body.pagina2 h3,
+body.pagina2 h4 {
   font-family:'Moon Dance', cursive;
   font-size: x-large;
 }
@@ -311,55 +395,88 @@ body.pagina2 .caixa-doaçao {
   color: #000;
   box-sizing: border-box;
   font-family: 'Livvic', sans-serif;
+  border: 4px solid #0096ff; /* borda fina preta */
+}
+
+
+.carrossel-wrapper {
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
 }
 
 body.pagina2 .doacoes-container {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 40px auto;
-  max-width: 1200px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
 }
 
+body.pagina2 .doacoes-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+body.pagina2 .doacoes-container::-webkit-scrollbar-thumb {
+  background-color: #0096FF;
+  border-radius: 10px;
+}
+
+/* Estilo do card */
 body.pagina2 .doacao-card {
-  background-color: #80B3FF;
-  border: 2px solid #0096FF;
+  background-color: #E6F3FF;   /* fundo azul claro */
   border-radius: 15px;
-  padding: 20px;
-  width: 250px;
+  padding: 25px 20px;
+  flex: 0 0 300px;             /* mantém a largura fixa */
+  min-height: 530px;           /* altura mínima */
+  max-height: 580px;           /* altura máxima */
   text-align: center;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 body.pagina2 .doacao-card:hover {
   transform: translateY(-5px);
 }
 
+/* Área da imagem (ícone) */
 body.pagina2 .doacao-card .imagem {
-  width: 100%;
-  height: 140px;
-  background-color: #98E4FF;
-  border-radius: 10px;
+  width: 90px;               /* tamanho do ícone */
+  height: 90px;
+  margin: 0 auto 20px auto;
+  object-fit: contain;
+  display: block;
+  background: none !important; /* tira fundo azul do quadrado */
+}
+
+/* Título */
+body.pagina2 .doacao-card h5 {
+  font-family: 'Livvic', sans-serif;
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #003366;            /* azul escuro */
   margin-bottom: 15px;
-  /* background-image: url('sua-imagem-aqui.jpg'); */
-  background-size: cover;
-  background-position: center;
+  text-align: left;
+  line-height: 1.3em;
+  text-transform: uppercase; /* igual na imagem */
 }
 
-body.pagina2 .doacao-card h3 {
-  font-family: 'Moon Dance', cursive;
-  font-size: 1.4em;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
+/* Texto */
 body.pagina2 .doacao-card p {
   font-family: 'Livvic', sans-serif;
-  font-size: 0.95em;
+  font-size: 0.9em;
   color: #333;
+  margin: 0;
+  text-align: left;
+  line-height: 1.4em;
 }
+
+
 
 body.pagina2 .reciclagem-container {
   display: flex;
@@ -382,7 +499,6 @@ body.pagina2 .mapaGoogle iframe {
   object-fit: cover;
 }
 
-/* ---------------- PÁGINA 2 ---------------- */
 .pagina2 .doacoes-links-container {
   display: flex;
   flex-direction: column;
@@ -397,7 +513,7 @@ body.pagina2 .mapaGoogle iframe {
   display: flex;
   align-items: center;
   gap: 20px;                  /* espaço entre texto e botão */
-  background-color: #bcf8f3;
+  background-color: #d2daff;
   border-radius: 16px;        /* leve arredondado */
   padding: 10px 0px;
   width: 100%;                /* ocupa toda a largura disponível */
