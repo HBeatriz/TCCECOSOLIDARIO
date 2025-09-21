@@ -2,16 +2,17 @@
 /* ESTILO GERAL DA PÁGINA  */
 /* ======================== */
 body.pagina1 {
-  background-color: #d7fbe8;
-  font-family: 'Livvic', sans-serif;
-  font-size: larger;
-  padding-left: 20px;  /* espaçamento lateral */
-  padding-right: 20px;
-  box-sizing: border-box;
+  background-color: #d7fbe8;   
+  font-family: 'Livvic', sans-serif; 
+  font-size: larger;           
+  padding-left: 20px;          
+  padding-right: 20px;         
+  box-sizing: border-box;      
 }
 
+
 body.pagina1 h3 {
-  font-family: 'Moon Dance', cursive;
+  font-family: "Bentham", serif;
   font-size: x-large;
 }
 
@@ -38,7 +39,7 @@ body.pagina1 h3 {
   position: sticky;
   top: 10px;
   z-index: 1000;
-  gap: 10px; /* espaçamento entre itens da esquerda */
+  gap: 10px; 
 }
 
 /* itens do menu */
@@ -52,7 +53,7 @@ body.pagina1 h3 {
   text-decoration: none;
   padding: 9px 16px;
   border: none;
-  background-color: #0096ff; /* azul padrão dos outros botões */
+  background-color: #0096ff; 
   color: #ffffff;
   font-weight: 600;
   font-size: 14px;
@@ -60,7 +61,7 @@ body.pagina1 h3 {
   cursor: pointer;
   box-shadow: 0 2px 3px rgba(0,0,0,0.15);
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 10px; /* espaço entre links */
+  margin-right: 10px; 
 }
 
 /* hover dos links */
@@ -72,12 +73,12 @@ body.pagina1 h3 {
 
 /* botão MODO ACESSÍVEL no canto direito */
 #acessibilidade {
-  margin-left: auto; /* empurra para o canto direito */
+  margin-left: auto; 
 }
 
 /* botão MODO ACESSÍVEL mantém a cor definida pelo JS */
 #acessibilidade button {
-  background-color: #D55E00; /* mesmo que no JS */
+  background-color: #D55E00; 
   color: white;
   padding: 10px 15px;
   border: none;
@@ -91,7 +92,7 @@ body.pagina1 h3 {
 
 /* hover do botão MODO ACESSÍVEL */
 #acessibilidade button:hover {
-  background-color: #009E73; /* mesmo que no JS */
+  background-color: #009E73; 
   color: white;
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
@@ -106,7 +107,7 @@ body.pagina1 h3 {
   }
 
   #acessibilidade {
-    margin-left: 0; /* empilhado no mobile */
+    margin-left: 0; 
   }
 }
 
@@ -122,7 +123,8 @@ body.pagina1 h3 {
 
 .eco {
   font-family: 'Livvic', sans-serif;
-  font-size: 100px;
+  font-size: 90px;
+  color: #000;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -138,7 +140,7 @@ body.pagina1 h3 {
 }
 
 .solidario {
-  font-family: 'Moon Dance', cursive;
+  font-family: "Bentham", serif;
   font-size: 50px;
   font-weight: bold;
   margin: -30px 0 0 0;
@@ -383,15 +385,15 @@ input[name="carousel-control"] {
 /* ======================== */
 .listas-lado-a-lado {
   display: flex;
-  gap: 40px;               /* espaço entre os blocos */
-  align-items: flex-start;  /* alinha pelo topo */
-  flex-wrap: wrap;          /* quebra em telas pequenas */
+  gap: 40px;               
+  align-items: flex-start;  
+  flex-wrap: wrap;         
 }
 
 /* Cada bloco */
 .listas-lado-a-lado .bloco {
-  flex: 1;                 /* ocupa proporcionalmente o espaço disponível */
-  min-width: 300px;        /* largura mínima para não quebrar o conteúdo */
+  flex: 1;                
+  min-width: 300px;    
 }
 
 /* Mantém o toggle funcional */
@@ -450,20 +452,20 @@ input[name="carousel-control"] {
 .bloco-reciclagem {
   display: flex;
   align-items: flex-start;
-  width: 100vw; /* ocupa toda a largura da tela */
+  width: 100vw; 
   margin: 0;
   padding: 0;
 }
 
 .conteudo-reciclagem {
   flex: 1;
-  padding-right: 20px; /* espaço entre texto e meia-lua */
+  padding-right: 20px; 
 }
 
 /* Meia-lua com lado reto encostado na borda da tela */
 .reciclagem-lua {
-  width: 370px; /* largura da meia-lua */
-  height: 390px; /* altura da meia-lua */
+  width: 370px; 
+  height: 390px; 
   background: #62d2a2;
 
   /* topo e base retos, lado curvo voltado para o texto */
@@ -477,7 +479,7 @@ input[name="carousel-control"] {
   justify-content: center;
   align-items: center;
 
-  margin-left: auto; /* garante que encoste na borda direita */
+  margin-left: auto;
 }
 
 .reciclagem-lua img {
@@ -493,7 +495,7 @@ input[name="carousel-control"] {
 .bloco-descartar {
   display: flex;
   align-items: center;
-  gap: 20px; /* espaço entre imagem e texto */
+  gap: 20px; 
   width: 100%;
   margin: 20px 0;
 }
@@ -505,7 +507,7 @@ input[name="carousel-control"] {
 }
 
 .descartar-texto {
-  flex: 1; /* deixa o texto ocupar o restante */
+  flex: 1; 
 }
 
 /* ======================== */
@@ -620,8 +622,6 @@ body.pagina1 .mapaGoogle iframe {
 }
 
 /* ---------------- PÁGINA 2 ---------------- */
-/* --CSS DOAÇÃO-- */
-
 /* ------------------ ESTILO GERAL DA PÁGINA ------------------ */
 .pagina2 {
   padding-left: 20px;
@@ -637,7 +637,7 @@ body.pagina2 {
 
 body.pagina2 h3,
 body.pagina2 h4 {
-  font-family: 'Moon Dance', cursive;
+  font-family: "Bentham", serif;
   font-size: x-large;
 }
 
@@ -655,7 +655,7 @@ body.pagina2 h4 {
 
 /* Título ECO */
 .logo-container.pagina2 .eco {
-  font-family: 'Moon Dance', cursive;
+  font-family: "Bentham", serif;
   font-size: 50px;
   margin: 0;
   display: inline-flex;
@@ -908,19 +908,19 @@ body.pagina2 .doacao-card p {
 .doacao-item {
   flex: 1;
   min-width: 300px;
-  text-align: left; /* mantém o texto da lista à esquerda */
+  text-align: left; 
 }
 
 .doacao-img {
   display: block;
-  margin: 0 auto 15px auto; /* centraliza a imagem */
+  margin: 0 auto 15px auto; 
   max-width: 160px;
 }
 
 .doacao-item strong {
   display: block;
-  text-align: center; /* centraliza o título */
-  margin-bottom: 10px; /* espaço entre título e lista */
+  text-align: center; 
+  margin-bottom: 10px; 
 }
 
 
@@ -928,20 +928,20 @@ body.pagina2 .doacao-card p {
 
 .datas-especiais-container {
   display: flex;
-  flex-direction: column; /* mantém o texto de introdução acima */
+  flex-direction: column; 
   gap: 20px;
 }
 
 .datas-com-imagem {
-  display: flex;           /* imagem e lista lado a lado */
-  align-items: flex-start; /* alinha pelo topo */
-  gap: 20px;               /* espaço entre imagem e lista */
+  display: flex;          
+  align-items: flex-start; 
+  gap: 20px;               
 }
 
 .imagem-datas {
-  width: 200px;            /* ajuste conforme necessário */
+  width: 200px;            
   height: auto;
-  border-radius: 10px;     /* opcional, deixa a imagem arredondada */
+  border-radius: 10px;     
 }
 
 .datas-com-imagem ul {
@@ -958,20 +958,20 @@ body.pagina2 .doacao-card p {
 .bloco-doacao {
   display: flex;
   align-items: flex-start;
-  width: 100vw; /* ocupa toda a largura da tela */
+  width: 100vw; 
   margin: 0;
   padding: 0;
 }
 
 .conteudo-doacao {
   flex: 1;
-  padding-right: 20px; /* espaço entre texto e meia-lua */
+  padding-right: 20px;
 }
 
 /* Meia-lua com lado reto encostado na borda da tela */
 .meia-lua {
-  width: 370px; /* largura da meia-lua */
-  height: 450px; /* altura da meia-lua */
+  width: 370px;
+  height: 450px;
   background: #E6F3FF;
 
   /* topo e base retos, lado curvo voltado para o texto */
@@ -985,7 +985,7 @@ body.pagina2 .doacao-card p {
   justify-content: center;
   align-items: center;
 
-  margin-left: auto; /* garante que encoste na borda direita */
+  margin-left: auto; 
 }
 
 .meia-lua img {
@@ -1003,7 +1003,7 @@ body.pagina2 .doacao-card p {
   gap: 40px;
   flex-wrap: wrap;
   width: 100%;
-  padding-right: 45px; /* adiciona espaço da borda esquerda */
+  padding-right: 45px; 
 }
 
 .mapa-container.doacao .texto-mapa {
@@ -1023,7 +1023,7 @@ body.pagina2 .doacao-card p {
 /* ------------------ COMO DOAR ONLINE ------------------ */
 .como-doar {
   display: flex;
-  align-items: flex-start; /* mantém o topo alinhado */
+  align-items: flex-start; 
   gap: 20px;
   margin: 20px 0;
   width: 100%;
@@ -1036,14 +1036,14 @@ body.pagina2 .doacao-card p {
 .como-doar-imagem img {
   max-width: 160px;
   border-radius: 10px;
-  margin-top: 40px;  /* desce a imagem em relação ao texto */
+  margin-top: 40px;  
 }
 
 /* ------------------ IMPORTANCIA DA DOÇÃO ONLINE ------------------ */
 
 .porque-doar {
   display: flex;
-  flex-direction: row-reverse; /* inverte a ordem: imagem à esquerda */
+  flex-direction: row-reverse; 
   align-items: flex-start;
   gap: 20px;
   margin: 20px 0;
@@ -1057,7 +1057,7 @@ body.pagina2 .doacao-card p {
 .porque-doar-imagem img {
   max-width: 300px;
   border-radius: 10px;
-  margin-top: 40px; /* desce a imagem em relação ao texto */
+  margin-top: 40px; 
 }
 
 
